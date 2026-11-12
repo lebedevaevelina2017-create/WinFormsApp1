@@ -1,0 +1,18 @@
+namespace WinFormsApp1
+{
+    internal static class Program
+    {
+        [STAThread]
+        static void Main()
+        {
+            // To customize application configuration such as set high DPI settings or default font,
+            // see https://aka.ms/applicationconfiguration.
+            ApplicationConfiguration.Initialize();
+
+            // ВОТ ЭТА СТРОЧКА СОЗДАЕТ БАЗУ ДАННЫХ И ТАБЛИЦЫ:
+            DatabaseHelper.InitializeDatabase();
+
+            Application.Run(new Form1());
+        }
+    }
+}
